@@ -33,7 +33,7 @@ jobs:
       - name: Build
         run: |
            npm run build
-           # Crée le dossier out s'il n'existe pas
+           npm run export
            mkdir -p out
            # Copie les fichiers statiques
            cp -r public/. out/
