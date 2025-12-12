@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://TSNB19.github.io'),
   title: "Mon Portfolio",
   description: "Portfolio professionnel avec mode sombre",
 };
