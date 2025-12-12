@@ -68,3 +68,7 @@ body {
 .border-border {
   border-color: hsl(var(--border));
 }
+/* Dans app/globals.css ou un module CSS */
+.ma-classe {
+  background-image: url('/images/Steve.jpg');
+}
