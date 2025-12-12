@@ -35,7 +35,7 @@ jobs:
            npm run build
            npm run export
            mkdir -p out
-           # Copie les fichiers statiques
+           cp -r .next/static out/_next/static
            cp -r public/. out/
 
       - name: Setup Pages
