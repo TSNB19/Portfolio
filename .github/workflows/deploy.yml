@@ -31,7 +31,12 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build
+        run: |
+           npm run build
+           # Crée le dossier out s'il n'existe pas
+           mkdir -p out
+           # Copie les fichiers statiques
+           cp -r public/. out/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
