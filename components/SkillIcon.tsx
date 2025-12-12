@@ -1,31 +1,21 @@
 import React from 'react';
 import { 
-  FaReact, 
-  FaNodeJs, 
-  FaGitAlt, 
-  FaFigma, 
   FaJs, 
   FaPython, 
+  FaReact, 
+  FaGitAlt, 
+  FaFigma, 
   FaGithub, 
   FaLinkedin, 
   FaPhone, 
   FaEnvelope 
 } from 'react-icons/fa';
 import { 
-  SiNextdotjs, 
   SiTypescript, 
   SiDocker, 
   SiNodedotjs,
   SiNextdotjs as NextJsIcon 
 } from 'react-icons/si';
-
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      [elemName: string]: any;
-    }
-  }
-}
 
 interface SkillIconProps {
   icon: string;
@@ -33,7 +23,7 @@ interface SkillIconProps {
 }
 
 export const SkillIcon = ({ icon, className = '' }: SkillIconProps) => {
-  const iconMap: Record<string, JSX.Element> = {
+  const iconMap: Record<string, React.ReactElement> = {
     javascript: <FaJs className={`text-yellow-400 ${className}`} />,
     typescript: <SiTypescript className={`text-blue-500 ${className}`} />,
     python: <FaPython className={`text-blue-600 ${className}`} />,
@@ -43,7 +33,7 @@ export const SkillIcon = ({ icon, className = '' }: SkillIconProps) => {
     git: <FaGitAlt className={`text-orange-500 ${className}`} />,
     docker: <SiDocker className={`text-blue-400 ${className}`} />,
     figma: <FaFigma className={`text-pink-500 ${className}`} />,
-    github: <FaGithub className={`${className}`} />,
+    github: <FaGithub className={className} />,
     linkedin: <FaLinkedin className={`text-blue-600 ${className}`} />,
     phone: <FaPhone className={`text-green-500 ${className}`} />,
     email: <FaEnvelope className={`text-gray-600 ${className}`} />
