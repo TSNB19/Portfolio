@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { personalInfo } from "@/config/personal-info"
 import Link from "next/link"
 import { SkillIcon } from "@/components/SkillIcon"
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -12,10 +13,13 @@ export default function Home() {
       <header className="container mx-auto flex items-center justify-between py-6 px-4">
         <div className="flex flex-col items-center">
           <div className="relative w-24 h-24 md:w-32 md:h-32 mb-4 overflow-hidden rounded-full border-2 border-primary/50 shadow-lg">
-            <img 
+            <Image
               src="/images/Steve.jpg" 
-              alt="Photo de profil" 
+              alt="Photo de profil"
+              width={128}
+              height={128}
               className="w-full h-full object-cover"
+              priority
               onError={(e) => {
                 // Fallback en cas d'erreur de chargement
                 const target = e.target as HTMLImageElement;
