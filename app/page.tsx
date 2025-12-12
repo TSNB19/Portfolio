@@ -14,18 +14,12 @@ export default function Home() {
         <div className="flex flex-col items-center">
           <div className="relative w-24 h-24 md:w-32 md:h-32 mb-4 overflow-hidden rounded-full border-2 border-primary/50 shadow-lg">
             <Image
-              src="/image/Steve.jpg" 
+              src={`${process.env.NODE_ENV === 'production' ? '/Portfolio' : ''}/images/Steve.jpg`}
               alt="Photo de profil"
               width={128}
               height={128}
               className="w-full h-full object-cover"
               priority
-              onError={(e) => {
-                // Fallback en cas d'erreur de chargement
-                const target = e.target as HTMLImageElement;
-                target.onerror = null;
-                target.src = 'https://via.placeholder.com/150';
-              }}
             />
           </div>
           <h1 className="text-2xl font-bold text-center">{personalInfo.name}</h1>
