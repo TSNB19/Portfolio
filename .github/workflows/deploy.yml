@@ -33,10 +33,9 @@ jobs:
       - name: Build
         run: |
           npm run build
-          npm run export
           mkdir -p out
           cp -r .next/static out/_next/static
-          cp -r public/. out/
+          cp -r public out/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
