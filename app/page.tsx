@@ -14,7 +14,7 @@ export default function Home() {
         <div className="flex flex-col items-center">
           <div className="relative w-24 h-24 md:w-32 md:h-32 mb-4 overflow-hidden rounded-full border-2 border-primary/50 shadow-lg">
             <Image
-              src="/images/Steve.jpg"
+              src="https://TSNB19.github.io/Portfolio/images/Steve.jpg"
               alt="Photo de profil"
               width={128}
               height={128}
