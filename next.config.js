@@ -7,3 +7,5 @@ const nextConfig = {
   trailingSlash: true,
   assetPrefix: process.env.NODE_ENV === 'production' ? '/Portfolio' : '',
 }
+
+module.exports = nextConfig
